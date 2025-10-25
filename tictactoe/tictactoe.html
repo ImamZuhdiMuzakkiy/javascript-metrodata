@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="..\index.html">⬅️ Back</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <div class="game-info">
+                <p>Giliran: <span class="current-player" id="currentPlayer">X</span> </p>
+            </div>
+            <div class="game-board" id="gameBoard">
+                <button class="cell" data-cell="0"></button>
+                <button class="cell" data-cell="1"></button>
+                <button class="cell" data-cell="2"></button>
+                <button class="cell" data-cell="3"></button>
+                <button class="cell" data-cell="4"></button>
+                <button class="cell" data-cell="5"></button>
+                <button class="cell" data-cell="6"></button>
+                <button class="cell" data-cell="7"></button>
+                <button class="cell" data-cell="8"></button>
+            </div>
+            <div class="game-status" id="gameStatus">
+
+            </div>
+            <div class="controls">
+                <button class="reset-btn" onclick="resetGame()">Main lagi</button>
+            </div>
+            <div class="score-board">
+                <div class="score score-x">
+                    <strong>Pemain X: <span id="scoreX">0</span></strong>
+                </div>
+                <div class="score score-o">
+                    <strong>Pemain O: <span id="scoreO">0</span></strong>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

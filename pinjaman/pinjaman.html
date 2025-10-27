@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pinjaman AdaSaya</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,7 +13,40 @@
         </nav>
     </header>
     <main>
-        <h1>Pinjaman AdaSaya</h1>
+        <div class="container">
+            <h1>Pinjaman AdaSaya</h1>
+            <br>
+            <p>Selamat datang di halaman Pinjaman AdaSaya! Di sini, Anda dapat menghitung simulasi pinjaman dengan mudah dan cepat.</p>
+            <div class="card">
+                <div class="card-body">
+                    <form id="loanForm" onsubmit="event.preventDefault(); calculateLoan();">
+                        <label>Jumlah Pinjaman (Rp):</label>
+                        <input type="number" id="loanAmount">
+
+                        <label>Bunga Tahunan (%):</label>
+                        <input type="number" id="interestRate">
+
+                        <label>Tenor (Bulan):</label>
+                        <select id="loanTerm">
+                            <option value="6">6 Bulan</option>
+                            <option value="12">12 Bulan</option>
+                        </select>
+
+                        <button type="submit">Hitung Cicilan</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Hasil Simulasi Pinjaman</h3>
+                    <p id="monthlyPayment">Cicilan Bulanan: Rp 0</p>
+                    <p id="totalPayment">Total Pembayaran: Rp 0</p>
+                    <p id="totalInterest">Total Bunga: Rp 0</p>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

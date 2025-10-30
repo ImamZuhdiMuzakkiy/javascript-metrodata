@@ -27,6 +27,7 @@ function initGame() {
 
 function handleCellClick(event) {
     const cellIndex = event.target.getAttribute("data-cell");
+    // console.log(cellIndex);
     if (gameBoard[cellIndex] !== "" || !gameActive) {
         return;
     }
